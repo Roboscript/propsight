@@ -1,0 +1,234 @@
+
+    <header class="uk-background-secondary">
+        <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+            <nav class="uk-navbar-container">
+                <div class="uk-container">
+                    <div data-uk-navbar>
+                        <div class="uk-navbar-left">
+
+                            <a class="uk-navbar-item uk-logo" href="/index">
+                                <img src="assets/posts/logo.png" alt="Desk">
+                            </a>
+
+                        </div>
+                        <div class="uk-navbar-right">
+                            <ul class="uk-navbar-nav uk-visible@m">
+                                <li>
+                                    <a href="/index">Home</a>
+                                </li>
+                                <li class="uk-active">
+                                    <a href="#">Faq</a>
+                                </li>
+                                <li class="uk-active">
+                                    <a href="/users/pricing">Pricing</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                {{#if user}}
+                                <li class="uk-active">
+                                    <a href="/users/logout">Logout</a>
+                                </li>
+                                {{else}}
+                                <li class="uk-active">
+                                    <a href="/users/signin">Login</a>
+                                </li>
+                                {{/if}}
+
+
+
+                            </ul>
+
+
+                            <div>
+                                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                                    </form>
+                                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                                </div>
+                            </div>
+                            <script>
+                                SimpleJekyllSearch({
+                                    searchInput: document.getElementById('navbar-search'),
+                                    resultsContainer: document.getElementById('navbar-search-results'),
+                                    noResultsText: '<li>No results found</li>',
+                                    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                                    json: '/search.json'
+                                });
+                            </script>
+
+
+                            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main aria-label="Content">
+        <div class="uk-section">
+            <div class="uk-container uk-container-small">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Frequently Asked Questions</h1>
+
+                    <div class="uk-article-content">
+                        <p>
+                            <br />
+                        </p>
+
+                        <ul uk-accordion="multiple: true">
+
+                            <li>
+                                <h3 class="uk-accordion-title">What and who is this for?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>Propsight is a housing and area data platform. It centralizes key information about properties
+                                        and the area that surrounds them. Use it to gain insight into an area, it’s attributes
+                                        and unseen opportunities.
+                                    </p>
+
+                                    <p>
+                                        It can be used by any area curious individual, a concerned parent or keen investor. The information produced here can be
+                                        used to make major impactful decisions.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="uk-accordion-title">How do I search an area?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>Type in your desired area in our search tab and click search, It’s that simple!</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="uk-accordion-title">Where does your data come from?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>Government and private sources. We also verify the quality from more than one source.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="uk-accordion-title">What is a dashboard?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>A dashboard is a type of interface that helps you manage your account, save searches
+                                        and analyze all your insights together.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="uk-accordion-title">Can I cancel my subscription after the first month?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>Yes. After every month you are allowed to renew, up-grade or down-grade and cancel all
+                                        together. We would kindly ask that you inform us 14 days prior to cancelling.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="uk-accordion-title">What forms of payment do you accept?</h3>
+                                <div class="uk-accordion-content">
+                                    <p>All. Ecocash, Zimswitch, Visa or international cards.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="uk-section uk-section-muted uk-text-center uk-text-muted uk-link-muted">
+        <div class="uk-container uk-container-small">
+
+            <div>
+                <ul class="uk-subnav uk-flex-center">
+                    <li>
+                        <a href="/index">Help</a>
+                    </li>
+                    <li class="uk-active">
+                        <a href="/faq">Faq</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-margin-medium">
+                <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+
+                    <div class="uk-first-column">
+                        <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-margin-medium uk-text-small copyright">Made by a
+                <a href="www.cdi.co.zw/">C4di</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+            <ul class="uk-nav uk-nav-default">
+                <li>
+                    <a class="uk-logo uk-margin-small-bottom" href="/index">
+                        <img src="assets/posts/logo.svg" alt="Desk">
+                    </a>
+                </li>
+                <li>
+                    <a href="/index">Help</a>
+                </li>
+                <li>
+                    <a href="/faq">Faq</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+
+            <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+                <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                    <div class="uk-first-column">
+                        <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                    <div>
+                        <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
